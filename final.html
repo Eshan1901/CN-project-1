@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            font-family: sans-serif; /* Changed from bold to sans-serif for better font appearance */
+            background-color: #121212;
+            color: #e1e1e1;
+        }
+        header {
+            background-color: #0b0b0b;
+            padding: 30px;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            height: 100px; /* Corrected height value */
+        }
+        .container {
+            flex: 1; /* Allows the container to take up remaining space */
+            display: flex;
+            flex-direction: row;
+        }
+        .sidebar {
+            width: 150px;
+            background-color: #282828;
+            padding: 15px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        }
+        .sidebar a {
+            color: #b3b3b3;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #9a1515;
+        }
+        .main-content {
+            flex: 1;
+            padding: 10px;
+            font-style: italic;
+        }
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        .album {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9a1515;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+        .album a {
+            text-decoration: none; /* Remove default underline */
+            color: inherit; /* Inherit color from parent */
+        }
+        .album img {
+            width: 100%;
+            height: auto;
+            max-height: 150px; /* Adjust the height to maintain aspect ratio */
+            object-fit: cover; /* Ensures image covers the box without distortion */
+        }
+        .album h3 {
+            margin: 10px 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        footer {
+            background-color: #1db954;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p></p>
+        <p style="display:inline-block;">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spotify_logo_with_text.svg/1200px-Spotify_logo_with_text.svg.png" height="80" alt="Spotify Logo">
+        </p>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">Browse</a>
+            <a href="#">Library</a>
+            <a href="#">Search</a>
+        </div>
+        <div class="main-content">
+            <h2>Featured Artists</h2>
+            <div class="album-grid">
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/The_Weeknd" target="_blank">
+                        <img src="https://w0.peakpx.com/wallpaper/974/175/HD-wallpaper-the-weeknd-after-hours-music-musica-pop-weeknd.jpg" alt="The Weeknd">
+                        <h3>The Weeknd</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Mohit_Chauhan" target="_blank">
+                        <img src="https://i.scdn.co/image/ab6761610000e5eb16691117e2ba803946b203ba" alt="Mohit Chauhan">
+                        <h3>Mohit Chauhan</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Travis_Scott" target="_blank">
+                        <img src="https://media.gq.com/photos/654866eb710360665d544892/master/w_1600%2Cc_limit/GQ1223_Scott_D_10.jpg" alt="Travis Scott">
+                        <h3>Travis Scott</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Drake_(musician)" target="_blank">
+                        <img src="https://wallpapercat.com/w/full/f/d/2/117000-2068x3000-samsung-hd-drake-background.jpg" alt="Drake">
+                        <h3>Drake</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Dua_Lipa" target="_blank">
+                        <img src="https://i.pinimg.com/736x/d7/d7/ac/d7d7ac0127f105432a86c0035c7d9711.jpg" alt="Dua Lipa">
+                        <h3>Dua Lipa</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Ed_Sheeran" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1UzCGsmNgANlUVQZpugFScQGODvE1ueN2Bg&s" alt="Ed Sheeran">
+                        <h3>Ed Sheeran</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Justin_Bieber" target="_blank">
+                        <img src="https://w0.peakpx.com/wallpaper/140/413/HD-wallpaper-justin-bieber-hottest-king-of-pop-man-musician-songwriter.jpg" alt="Justin Bieber">
+                        <h3>Justin Bieber</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Atif_Aslam" target="_blank">
+                        <img src="https://i.pinimg.com/originals/cf/c2/1a/cfc21a4ebee1371e006ff27448337397.jpg" alt="Atif Aslam">
+                        <h3>Atif Aslam</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Kanye_West" target="_blank">
+                        <img src="https://i8.amplience.net/i/naras/kanye-west_MI0005472981-MN0000361014" alt="Kanye West">
+                        <h3>Kanye West</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Arijit_Singh" target="_blank">
+                        <img src="https://w0.peakpx.com/wallpaper/97/713/HD-wallpaper-arjith-singh-bollywood-singer.jpg" alt="Arijit Singh">
+                        <h3>Arijit Singh</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Shawn_Mendes" target="_blank">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZRAFxa7oPckHMszuky7bywvRDmOJLYFLL-A&s" alt="Shawn Mendes">
+                        <h3>Shawn Mendes</h3>
+                    </a>
+                </div>
+                <div class="album">
+                    <a href="https://en.wikipedia.org/wiki/Anuv_Jain" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Anuv_Jain.jpeg/640px-Anuv_Jain.jpeg" alt="Anuv Jain">
+                        <h3>Anuv Jain</h3>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>2024 SPOTIFY</p>
+    </footer>
+</body>
+</html>
